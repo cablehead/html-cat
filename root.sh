@@ -24,8 +24,8 @@ fi
 
 if [[ "$METHOD" == "GET" && "$P" == "/sse" ]]; then
     meta_out headers="$(jo "content-type"="text/event-stream")"
-    exec nu --no-history --no-std-lib --no-history -c '
-    tail -n1 -F ./bus | lines | each { |x| print $"data: ($x)\n" }
+    exec nu --no-config-file --no-std-lib --no-history -c '
+        tail -n1 -F ./bus | lines | each { |x| print $"data: ($x)\n" }
     '
 fi
 
