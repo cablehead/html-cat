@@ -7,7 +7,7 @@ display is:
 
 - have simple bus for the HTML packets to view
 - load an [index.html](./index.html) that uses [htmx](https://htmx.org) to update content on new SSE event
-- finally, an end point emits SSE events on each bus event
+- finally, an endpoint emits SSE events on each bus event
 
 Then you can `$ gen-html | bus`
 
