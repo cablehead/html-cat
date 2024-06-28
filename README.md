@@ -12,7 +12,7 @@ display is:
 Then you can `$ gen-html | bus`
 
 The "bus" can be as simple as `cat >> bus`, and the SSE endpoint is
-`tail -F bus | to-sse`.
+[`tail -F bus | to-sse`](https://github.com/cablehead/html-cat/blob/main/root.sh#L28)
 
 ![Screencast](https://github.com/cablehead/html-cat/assets/1394/11e5cb05-fa13-4910-a8a3-069f891546d5)
 
