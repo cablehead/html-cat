@@ -1,3 +1,4 @@
+![Screencast](https://github.com/cablehead/html-cat/assets/1394/11e5cb05-fa13-4910-a8a3-069f891546d5)
 
 ## Required cli tools
 
