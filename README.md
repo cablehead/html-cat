@@ -6,7 +6,7 @@ A common pattern I use to pipe HTML from the command line to a browser for
 display is:
 
 - have simple bus for the HTML packets to view
-- load an index.html that uses htmx to update content on new SSE event
+- load an index.html that uses [htmx](https://htmx.org) to update content on new SSE event
 - finally, an end point emits SSE events on each bus event
 
 Then you can `$ gen-html | bus`
