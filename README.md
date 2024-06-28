@@ -18,7 +18,7 @@ The "bus" can be as simple as `cat >> bus`, and the SSE endpoint is
 
 ## Required cli tools
 
-- http-sh
+- [http-sh](https://github.com/cablehead/http-sh)
 - jo
 - jq
 - nu (nushell)
