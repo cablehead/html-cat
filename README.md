@@ -9,8 +9,8 @@ A handy trick I use to pipe HTML from the command line to a webpage involves:
 - A static [index.html](./index.html) that uses [htmx](https://htmx.org) to
   replace the content of a `<div>` with new HTML content received from an SSE
   endpoint
-- An endpoint which listens to the bus for new payloads which it emits as an SSE event
-  For `echo '<p>Hai</p>' >> bus` this looks like: [`tail -n1 -F bus |
+- An endpoint which listens to the bus for new payloads which it emits as an
+  SSE event For `echo '<p>Hai</p>' >> bus` this looks like: [`tail -n1 -F bus |
   to sse`](https://github.com/cablehead/html-cat/blob/main/root.sh#L28).
 
 
