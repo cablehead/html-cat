@@ -1,7 +1,3 @@
-```
-Status: demo
-```
-
 A trick I use to pipe HTML from the command line to a webpage involves:
 
 - Setting up a "bus" for HTML packets to view. The "bus" can be as simple as
