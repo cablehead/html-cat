@@ -13,6 +13,7 @@ A trick I use to pipe HTML from the command line to a webpage involves:
   SSE event. For `echo '<p>Hai</p>' >> bus`, this looks like: [`tail -n1 -F bus
   | to sse`](https://github.com/cablehead/html-cat/blob/main/root.sh#L28).
 
+<br/>
 
 ![Screencast](https://github.com/cablehead/html-cat/assets/1394/11e5cb05-fa13-4910-a8a3-069f891546d5)
 
