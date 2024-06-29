@@ -1,13 +1,17 @@
-A trick I use to pipe HTML from the command line to a webpage involves:
+This is a pattern I use to pipe HTML from the command line to a webpage, in an
+adhoc way. It involves:
 
 - Setting up a "bus" for HTML packets to view. The "bus" can be as simple as
   `echo '<p>Hai</p>' >> bus`.
 - A static [index.html](./index.html) that uses [htmx](https://htmx.org) to
   replace the content of a `<div>` with new HTML content received from an SSE
   endpoint.
-- An endpoint that listens to the bus for new payloads, which it emits as an
-  SSE event. For `echo '<p>Hai</p>' >> bus`, this looks like: [`tail -n1 -F bus
-  | to sse`](https://github.com/cablehead/html-cat/blob/main/root.sh#L28).
+- An endpoint that listens to the bus for new payloads, which it emits as an SSE
+  event. For `echo '<p>Hai</p>' >> bus`, this looks like:
+  [`tail -n1 -F bus | to sse`](https://github.com/cablehead/html-cat/blob/main/root.sh#L28).
+
+In practice, you wouldn't use `tail -F` as your bus 😂, but for quick
+experiments, it's silly simple and really flexible.
 
 <br/>
 
