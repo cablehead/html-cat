@@ -1,12 +1,15 @@
 
 watch .  {|typ, path|
 	if $typ == "Write" {
-		let path = $path | path basename
+		let file = $path | path basename
 
-		if $path == "main.html" {
-			cat $path
+		if $file == "main.html" {
+			cat $path | xs append ./page main.html
 			return
 		}
 
+		if $file == "style.css" {
+			cat $path | xs append ./page sse/styles
+		}
 	}
 }
