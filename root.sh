@@ -24,13 +24,7 @@ fi
 
 if [[ "$METHOD" == "GET" && "$P" == "/sse" ]]; then
     meta_out headers="$(jo "content-type"="text/event-stream")"
-    exec /Users/andy/.s/sessions/03B73LNTW7UJJP1EWGDQMZNH3/nushell/target/debug/nu --no-std-lib --no-history ./go-sse.nu
-fi
-
-if [[ "$METHOD" == "GET" && "$P" == "/sse/css" ]]; then
-    meta_out headers="$(jo "content-type"="text/event-stream")"
-    cat style.css | sed 's/^/data: /'; echo
-    exit
+    exec /Users/andy/.s/sessions/03B73LNTW7UJJP1EWGDQMZNH3/nushell/target/debug/nu --no-std-lib --no-history ./n.nu
 fi
 
 meta_out status=404 headers="$(jo "content-type"="text/html")"

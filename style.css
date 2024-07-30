@@ -1,11 +1,11 @@
 /* nord dark mode */
 
 body {
-	margin: 0;
-	padding: 0;
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 0 2ch;
 	color: #d8dee9;
 	background-color: #2e3440;
-	/* review / blog post */
 	font-family: serif;
 	font-size: 1.2em;
 }
@@ -14,8 +14,6 @@ a {
 	color: #81a1c1;
 	text-decoration: none;
 }
-
-/* flesh out a variations */
 
 a:visited {
 	color: #5e81ac;

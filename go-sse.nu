@@ -3,7 +3,7 @@ def to-sse [] {
 }
 
 def go [] {
-    h. request get ../xs/store/sock//?follow |
+    h. request get ./page/sock//?follow |
         lines | each { from json } | stateful filter {found: false} { |state, x| 
           if $state.found {
                 return { out: $x }
@@ -13,9 +13,10 @@ def go [] {
                 return { state: {found: true}, out: ($state | get last?) }
             }
            { state: {found: false, last: $x} }
-        } | each {|x|
-            print (h. request get $"../xs/store/sock//cas/($x.hash)" | to-sse)
-        }
+        } | each {|x| print $x}
+        # | each {|x|
+            # print (h. request get $"../xs/store/sock//cas/($x.hash)" | to-sse)
+        # }
 }
 
 go
