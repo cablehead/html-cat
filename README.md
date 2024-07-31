@@ -3,6 +3,7 @@
 This branch is an excercise in stream driven development,
 to see how far we can go with it.
 
+https://github.com/user-attachments/assets/88d8001f-15eb-40fd-bce8-2ae8ee44d513
 
 
 ```sh
