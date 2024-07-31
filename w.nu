@@ -1,5 +1,5 @@
-
 watch .  {|typ, path|
+  print $typ $path
 	if $typ == "Write" {
 		let file = $path | path basename
 

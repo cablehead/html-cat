@@ -1,4 +1,9 @@
-## To run
+## stream driven development
+
+This branch is an excercise in stream driven development,
+to see how far we can go with it.
+
+
 
 ```sh
 http-sh :4007 -- ./root.sh
