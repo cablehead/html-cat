@@ -5,6 +5,15 @@ go with it. It still feels like a spaghetti mess, it requires five background
 processes to facilitate the demonstration. I think we can continue to refine
 this pattern, and make it more ergonomic.
 
+### Path to streamline
+
+- `xs` has a builtin http server (removes the need for `http-sh`)
+- this http server has a convenience to broadcast topics as server sent events
+  (removes the need for `go-sse.nu`)
+- edit files (main.html and style.css) directly on the event stream (removes
+  the need for `source w.nu`)
+- ability to register a handler with xs: replaces `source r2.nu`
+
 https://github.com/user-attachments/assets/88d8001f-15eb-40fd-bce8-2ae8ee44d513
 
 ### How this hangs together
