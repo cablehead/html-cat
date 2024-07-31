@@ -14,16 +14,34 @@ http-sh :4007 -- ./root.sh
 open http://localhost:4007
 ```
 
+This serves 2x endpoints:
+
+#### `/` - literally [`cat index.html`](https://github.com/cablehead/html-cat/blob/with-xs/root.sh#L22)
+
+index.html uses htmx's SSE extention to fill two placeholders "styles" and "main".
+
+```
+<body hx-ext="sse" sse-connect="/sse">
+    <style sse-swap="styles">
+        /* Initial styles */
+    </style>
+    <div sse-swap="main">
+        Waiting for a SSE "main" event....
+    </div>
+</body>
+```
+
+#### `/sse` - runs the nushell script go-sse.nu
+
 An event stream / bus is provided by [`xs`](https://github.com/cablehead/xs),
 
 ```sh
 xs ./page
 ```
 
-This serves 2x endpoints:
+go-see watches the event stream and emits topics prefixed with
+`sse/<event-name>` as server sent events.
 
-- `/` - literally `cat index.html`
-- `/sse` - runs the nushell script go-sse.nu
 
 ## in background
 
