@@ -1,7 +1,6 @@
 ## stream driven development
 
-This branch is an excercise in stream driven development,
-to see how far we can go with it.
+This branch is an exercise in stream driven development, to see how far we can go with it.
 
 https://github.com/user-attachments/assets/88d8001f-15eb-40fd-bce8-2ae8ee44d513
 
@@ -14,11 +13,11 @@ http-sh :4007 -- ./root.sh
 open http://localhost:4007
 ```
 
-This serves 2x endpoints:
+This serves two endpoints:
 
 #### `/` - literally [`cat index.html`](https://github.com/cablehead/html-cat/blob/with-xs/root.sh#L22)
 
-index.html uses htmx's SSE extention to fill two placeholders "styles" and "main".
+index.html uses htmx's SSE extension to fill two placeholders "styles" and "main".
 
 ```
 <body hx-ext="sse" sse-connect="/sse">
@@ -39,7 +38,7 @@ An event stream / bus is provided by [`xs`](https://github.com/cablehead/xs),
 xs ./page
 ```
 
-go-see watches the event stream and emits topics prefixed with
+go-sse watches the event stream and emits topics prefixed with
 `sse/<event-name>` as server sent events.
 
 ```
@@ -57,33 +56,22 @@ data: /* nord dark mode */
 data:
 data: body {
 data:   max-width: 800px;
-data:   margin: 4em auto;
-data:   padding: 0 2ch;
-data:   color: #d8dee9;
-data:   background-color: #2e3440;
-data:   font-family: serif;
-data:   font-size: 1.2em;
-data: }
-data:
-data: a {
-data:   color: #81a1c1;
-data:   text-decoration: none;
-data: }
-data:
-data: a:visited {
-data:   color: #5e81ac;
-data: }
-data:
-data: a:active {
-data:   color: #88c0d0;
-data: }
+data:   ...
 data:
 ```
 
+#### `source w.nu`
 
-## in background
+Watches for changes to the files `main.html` and `style.css`.
 
-```
-source w.nu # watches for changes to main.html and style.css
-source r2.nu  # watches for changes to urls and main.html to render sse/main
-```
+- on changes to `style.css`: the contents of `style.css` are appended to the
+  stream with the topic `sse/styles`
+- on changes to `main.html`: the contents of `main.html` are appended to the
+  stream with the topic `main.html`
+
+#### `source r2.nu`
+
+Watches the event stream for topics `main.html` and `url`. It maintains a list
+of seen urls and on either topic, uses the `minijinja-cli` CLI to render the
+template, passing the urls as data for the render. The output of the render is
+appended to the stream as `sse/main`.
