@@ -1,25 +1,39 @@
 
-h. request get ./page/sock |
+def render [$template $data] {
+    let path = mktemp -t 
+    $template | save -f $path
+    let output = ($data | to json -r | minijinja-cli -f json $path -)
+    rm $path
+    return $output
+}
+
+
+h. request get ./page/sock//?follow |
     lines |
-    stateful filter {found: false urls: []} {|state, x|
-        if $x == null {
-          return {out : $state}
-        }
+    each { from json } |
+    stateful filter {found: false data: {urls: []}} {|state, x|
+        mut state = $state
+        mut trigger = false
 
-        let x = ($x | from json)
+        if $x == null or $x.topic == "stream.cross.threshold" {
+            $state.found = true
+            $trigger = true
 
-        if $x.topic == "url" {
-            mut state = $state
-            $state.urls = ($state.urls | append (xs cas ./page $x.hash))
-            return {state: $state}
-        }
+        } else if $x.topic == "url" {
+            $state.data.urls = ($state.data.urls | append (xs cas ./page $x.hash))
+            $trigger = true
 
-        if $x.topic == "main.html" {
-            print $x
-            mut state = $state
+        } else if $x.topic == "main.html" {
             $state.template = (xs cas ./page $x.hash)
-            return {state: $state}
+            $trigger = true
         }
 
-        {}
-    }
+        if $state.found and $trigger {
+            return {
+                state: $state
+                out: (render $state.template $state.data)
+            }
+        }
+
+        {state: $state}
+    } | each { xs append ./page sse/main }
