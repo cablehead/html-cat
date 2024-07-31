@@ -5,9 +5,18 @@ to see how far we can go with it.
 
 https://github.com/user-attachments/assets/88d8001f-15eb-40fd-bce8-2ae8ee44d513
 
-<video
-    src="https://github.com/user-attachments/assets/88d8001f-15eb-40fd-bce8-2ae8ee44d513"
-    width="100%" height="auto" autoplay loop muted playsinline>
+
+<video 
+  width="100%" 
+  height="auto" 
+  autoplay 
+  loop 
+  muted 
+  playsinline 
+  preload="auto"
+>
+  <source src="https://github.com/user-attachments/assets/88d8001f-15eb-40fd-bce8-2ae8ee44d513">
+  Your browser does not support the video tag.
 </video>
 
 
