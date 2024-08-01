@@ -25,7 +25,7 @@ http-sh :4007 -- ./root.sh
 open http://localhost:4007
 ```
 
-![client -> http sequence diagram](./docs/client-http.png)
+<img src="./docs/client-http.png" alt="client -> http sequence diagram" style="width:50%;"/>
 
 This serves two endpoints:
 
