@@ -25,6 +25,8 @@ http-sh :4007 -- ./root.sh
 open http://localhost:4007
 ```
 
+![client -> http sequence diagram](./docs/client-http.png)
+
 This serves two endpoints:
 
 #### `/` - literally [`cat index.html`](https://github.com/cablehead/html-cat/blob/with-xs/root.sh#L22)
