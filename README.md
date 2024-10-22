@@ -2,8 +2,8 @@
 
 This branch is an exercise in stream driven development, to see how far we can
 go with it. It still feels like a spaghetti mess. It requires five background
-processes to facilitate this demonstration. I think we can continue to refine
-this pattern, and make it more ergonomic.
+processes to facilitate this demonstration. I think we can [continue to refine
+this pattern](#path-to-streamline), and make it more ergonomic.
 
 https://github.com/user-attachments/assets/88d8001f-15eb-40fd-bce8-2ae8ee44d513
 
