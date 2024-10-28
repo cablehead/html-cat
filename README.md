@@ -1,3 +1,5 @@
+todo: [rework to be pure bash](https://github.com/cablehead/html-cat/issues/1)
+
 This is a pattern I use to pipe HTML from the command line to a webpage, in an
 adhoc way. It involves:
 
