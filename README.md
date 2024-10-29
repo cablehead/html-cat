@@ -1,7 +1,7 @@
 This repository contains experiments on stream-driven development using CLI
 tools to serve and update HTML in real-time.
 
-![image](https://github.com/user-attachments/assets/377d04f2-e08c-4bb3-a958-46a68868491e)
+<img src="https://github.com/user-attachments/assets/377d04f2-e08c-4bb3-a958-46a68868491e" alt="image" height="100">
 
 Each branch presents a unique method for piping data and creating reactive web
 interfaces with lightweight, modular tools.
