@@ -9,7 +9,7 @@ Available branches / experiments:
 
 - HTTP served with: Bash + [http-sh](https://github.com/cablehead/http-sh)
 - Event bus: cat >> bus; tail -F bus (srsly)
-- jq, jo
+- aux tools: jq, jo
+- Client side: htmx, SSE
 
 ![Screencast](https://github.com/cablehead/html-cat/assets/1394/11e5cb05-fa13-4910-a8a3-069f891546d5)
-
