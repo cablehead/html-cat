@@ -1,9 +1,7 @@
-## stream driven development
-
-This branch is an exercise in stream driven development, to see how far we can
-go with it. It still feels like a spaghetti mess. It requires five background
-processes to facilitate this demonstration. I think we can [continue to refine
-this pattern](#path-to-streamline), and make it more ergonomic.
+This one is quite the spaghetti mess. It requires five background processes to
+facilitate this demonstration. I think we can
+[continue to refine this pattern](#path-to-streamline), and make it more
+ergonomic.
 
 https://github.com/user-attachments/assets/88d8001f-15eb-40fd-bce8-2ae8ee44d513
 
@@ -22,7 +20,8 @@ This serves two endpoints:
 
 #### `/` - literally [`cat index.html`](https://github.com/cablehead/html-cat/blob/with-xs/root.sh#L22)
 
-index.html uses htmx's SSE extension to fill two placeholders "styles" and "main".
+index.html uses htmx's SSE extension to fill two placeholders "styles" and
+"main".
 
 ```
 <body hx-ext="sse" sse-connect="/sse">
@@ -86,6 +85,6 @@ appended to the stream as `sse/main`.
 - `xs` has a builtin http server (removes the need for `http-sh`)
 - this http server has a convenience to broadcast topics as server sent events
   (removes the need for `go-sse.nu`)
-- edit files (main.html and style.css) directly on the event stream (removes
-  the need for `source w.nu`)
+- edit files (main.html and style.css) directly on the event stream (removes the
+  need for `source w.nu`)
 - ability to register a handler with xs: replaces `source r2.nu`
