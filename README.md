@@ -16,7 +16,7 @@ https://github.com/cablehead/html-cat/assets/1394/11e5cb05-fa13-4910-a8a3-069f89
 
 ## [with-xs](https://github.com/cablehead/html-cat/tree/with-xs-snapshot-2024AUG01)
 
-https://github.com/cablehead/html-cat/assets/1394/11e5cb05-fa13-4910-a8a3-069f891546d5
+https://github.com/user-attachments/assets/88d8001f-15eb-40fd-bce8-2ae8ee44d513
 
 - HTTP served with: [http-sh](https://github.com/cablehead/http-sh) + Bash + Nushell
 - Event bus: [xs](https://github.com/cablehead/xs)
