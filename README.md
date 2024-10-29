@@ -1,7 +1,7 @@
 This repository contains experiments to interactively pipe content while
 working at the command line to a web interface.
 
-<img src="https://github.com/user-attachments/assets/377d04f2-e08c-4bb3-a958-46a68868491e" alt="image" height="200">
+| <img src="https://github.com/user-attachments/assets/377d04f2-e08c-4bb3-a958-46a68868491e" alt="image" height="200"> |
 
 Available branches / experiments:
 
