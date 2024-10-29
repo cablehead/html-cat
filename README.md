@@ -7,9 +7,18 @@ working at the command line to a web interface.
 
 ## [basics](https://github.com/cablehead/html-cat/tree/basics): as simple as can be?
 
-![Screencast](https://github.com/cablehead/html-cat/assets/1394/11e5cb05-fa13-4910-a8a3-069f891546d5)
+https://github.com/cablehead/html-cat/assets/1394/11e5cb05-fa13-4910-a8a3-069f891546d5
 
-- HTTP served with: Bash + [http-sh](https://github.com/cablehead/http-sh)
+- HTTP served with: [http-sh](https://github.com/cablehead/http-sh) + Bash
 - Event bus: cat >> bus; tail -F bus (srsly)
 - aux tools: jq, jo
+- Client side: htmx, SSE
+
+## [with-xs](https://github.com/cablehead/html-cat/tree/with-xs-snapshot-2024AUG01)
+
+https://github.com/cablehead/html-cat/assets/1394/11e5cb05-fa13-4910-a8a3-069f891546d5
+
+- HTTP served with: [http-sh](https://github.com/cablehead/http-sh) + Bash + Nushell
+- Event bus: [xs](https://github.com/cablehead/xs)
+- aux tools: minijinja-cli, watch
 - Client side: htmx, SSE
