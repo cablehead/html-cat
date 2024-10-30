@@ -8,6 +8,8 @@
 - aux tools: [minijinja-cli](https://github.com/mitsuhiko/minijinja)
 - Client side: vanilla JS, SSE
 
+https://github.com/user-attachments/assets/76220cc6-d44b-4ea0-a7e7-f8fdcdecd6e6
+
 Requirements:
 
 - [xs](https://github.com/cablehead/xs)
