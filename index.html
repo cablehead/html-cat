@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Reload</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <main></main>
+    <script>
+        const evtSource = new EventSource('/sse');
+        
+        evtSource.addEventListener('styles', () => {
+            const newLink = document.createElement('link');
+            newLink.rel = 'stylesheet';
+            newLink.href = '/styles.css?' + Date.now();
+            
+            // Only remove the old stylesheet after the new one has loaded
+            newLink.onload = () => {
+                const oldLink = document.querySelector('link[rel="stylesheet"]');
+                oldLink.parentNode.removeChild(oldLink);
+            };
+            
+            document.head.appendChild(newLink);
+        });
+
+        evtSource.addEventListener('main', (e) => {
+            document.querySelector('main').innerHTML = e.data;
+        });
+    </script>
+</body>
+</html>

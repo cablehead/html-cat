@@ -1,0 +1,28 @@
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2em 1em;
+
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  color: #f0f0f0;
+  background-color: #333;
+}
+
+h1 {
+  margin-bottom: 2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #268bd2;
+}
+
+a:hover {
+  color: #586e75;
+}
