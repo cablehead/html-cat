@@ -27,6 +27,12 @@ Start the web server:
 deno serve --allow-read --allow-net --watch --reload ./main.ts
 ```
 
+Edit `styles.css` and `main.j2.html` directly on the event store:
+
+```bash
+vi -u ./xs-edit.vimrc -c ':XS main.j2.html' -c ':XS styles.css'
+```
+
 ## How this hangs together
 
 - The bootstrap registers an event handler that watches for `url` and
