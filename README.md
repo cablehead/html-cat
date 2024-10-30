@@ -5,7 +5,7 @@ working at the command line to a web interface.
 
 # Available branches / experiments:
 
-## [deno2-with-xs]
+## [deno2-with-xs-v1](https://github.com/cablehead/html-cat/tree/deno2-with-xs-v1)
 
 - HTTP served with: [deno2](https://deno.land/) + [hono](https://hono.dev/docs/getting-started/deno) (perfect for using with [smallweb](https://www.smallweb.run)
 - Event bus: [xs](https://github.com/cablehead/xs) / content is edited directly on the event stream
