@@ -15,7 +15,6 @@ xs serve ./store --expose :8001
 
 Bootstrap the store:
 
-````bash
 ```nushell
 # in nushell
 use xs.nu *
