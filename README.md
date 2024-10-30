@@ -1,3 +1,13 @@
+## TL;DR
+
+- HTTP served with: [deno2](https://deno.land/) +
+  [hono](https://hono.dev/docs/getting-started/deno) (perfect for using with
+  [smallweb](https://www.smallweb.run)
+- Event bus: [xs](https://github.com/cablehead/xs) / content is edited directly
+  on the event stream
+- aux tools: minijinja-cli
+- Client side: vanilla JS, SSE
+
 Requirements:
 
 - [xs](https://github.com/cablehead/xs)
@@ -19,7 +29,7 @@ Bootstrap the store:
 # in nushell
 use xs.nu *
 source bootstrap.nu
-````
+```
 
 Start the web server:
 
