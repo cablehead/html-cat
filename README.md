@@ -28,7 +28,7 @@ Start the web server:
 deno serve --allow-read --allow-net --watch --reload ./main.ts
 ```
 
-## How this currently hangs together
+## How this hangs together
 
 - The bootstrap registers an event handler that watches for `url` and
   `main.j2.html` topics. When it sees either, it renders `.head main.j2.html`
