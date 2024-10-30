@@ -7,6 +7,8 @@ at the command line to a web interface.
 
 ## [deno2-with-xs-v1](https://github.com/cablehead/html-cat/tree/deno2-with-xs-v1)
 
+https://github.com/user-attachments/assets/76220cc6-d44b-4ea0-a7e7-f8fdcdecd6e6
+
 - HTTP served with: [deno2](https://deno.land/) +
   [hono](https://hono.dev/docs/getting-started/deno) (perfect for using with
   [smallweb](https://www.smallweb.run))
