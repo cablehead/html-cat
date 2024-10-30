@@ -8,7 +8,6 @@ if filereadable(expand('~/.config/nvim/init.lua'))
     luafile ~/.config/nvim/init.lua
 endif
 
-" xs file handling configuration
 function! OpenXSFile(filename)
   let ft = fnamemodify(a:filename, ':e')
   
@@ -36,4 +35,4 @@ function! OpenXSFile(filename)
   execute 'map <buffer> :wq :w !xs append ./store ' . shellescape(a:filename) . '<CR>:set nomodified<CR>:q<CR>'
 endfunction
 
-command! -nargs=1 xs call OpenXSFile(<q-args>)
+command! -nargs=1 XS call OpenXSFile(<q-args>)
