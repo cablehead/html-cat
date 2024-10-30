@@ -5,7 +5,7 @@
   [smallweb](https://www.smallweb.run))
 - Event bus: [xs](https://github.com/cablehead/xs) / content is edited directly
   on the event stream
-- aux tools: minijinja-cli
+- aux tools: [minijinja-cli](https://github.com/mitsuhiko/minijinja)
 - Client side: vanilla JS, SSE
 
 Requirements:
