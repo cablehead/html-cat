@@ -5,6 +5,13 @@ working at the command line to a web interface.
 
 # Available branches / experiments:
 
+## [deno2-with-xs]
+
+- HTTP served with: [deno2](https://deno.land/) + [hono](https://hono.dev/docs/getting-started/deno) (perfect for using with [smallweb](https://www.smallweb.run)
+- Event bus: [xs](https://github.com/cablehead/xs) / content is edited directly on the event stream
+- aux tools: minijinja-cli
+- Client side: vanilla JS, SSE
+
 ## [basics](https://github.com/cablehead/html-cat/tree/basics): as simple as can be?
 
 https://github.com/cablehead/html-cat/assets/1394/11e5cb05-fa13-4910-a8a3-069f891546d5
