@@ -47,7 +47,7 @@ vi -u ./xs-edit.vimrc -c ':XS main.j2.html' -c ':XS styles.css'
 
 ## How this hangs together
 
-- The bootstrap registers an event handler that watches for `url` and
+- The bootstrap registers an [event handler](https://github.com/cablehead/html-cat/blob/deno2-with-xs-v1/bootstrap/handlers/maintain.main.nu) that watches for `url` and
   `main.j2.html` topics. When it sees either, it renders `.head main.j2.html`
   using `minijinja-cli`, passing a list of all URLs that have been put on the
   store and appends the output as `main.html`.
